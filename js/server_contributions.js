@@ -10,11 +10,11 @@ const ENV_PATH = path.join(import.meta.dirname, "../.env");
 config({ path: ENV_PATH });
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 app.use(express.json());
-app.use(cors({
-    origin: 'http://127.0.0.1:5500'
-}));
+// app.use(cors({
+//     origin: 'http://127.0.0.1:5500'
+// }));
 
 
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -59,4 +59,4 @@ app.post("/api/contributions", async (req, res) => {
     res.send(data);
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

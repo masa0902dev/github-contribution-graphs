@@ -7,7 +7,8 @@ async function fetchContributions() {
     const period = document.getElementById("period").value;
     console.log("fetchContributions()\nuserName:", userName, "\nperiod:", period, "months");
     // PRODUCTION: fix the fetch URL for production environment
-    const response = await fetch("http://localhost:3000/api/contributions", {
+    // const response = await fetch("http://localhost:3000/api/contributions", {
+        const response = await fetch("https://masa0902dev.github.io/github-contribution-graphs/api/contributions", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
